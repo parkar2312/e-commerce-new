@@ -4,6 +4,7 @@ import {createStore ,combineReducers} from 'redux';
 import { productDetailsReducer, productListReducer } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducer';
 
+
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,

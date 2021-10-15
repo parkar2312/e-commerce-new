@@ -20,7 +20,7 @@ import './cascading.css';
  }
 
  useEffect(() =>{
-     if(productId){
+     if(qty){
          dispatch(addToCart(productId, qty));
 
      }
@@ -29,7 +29,7 @@ import './cascading.css';
  const checkOutHandler = ()=>{
      props.history.push("/signin?redirect=shipping");
  }
-     console.log(productId)
+     console.log(cart)
     return<div className="cart">
         <div className="hide"><h3>My Cart</h3></div>
             <div className="cart-list">
@@ -45,7 +45,7 @@ import './cascading.css';
                        cartItems.map(item => 
                          <li>
                       
-                           <div ><img className="cart-image" src={logo1} alt="img"/></div>
+                           <div ><img className="cart-image" src={item.image} alt="img"/></div>
                            <div>
                        <div className="cart-name">  
                            <div className="middlecont">
